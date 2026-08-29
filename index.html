@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>BeachBreeze</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="logo"><strong>⋆｡˚༝𓆞𓆝Beach𓆉︎Breeze𓆝𓆟༝˚｡⋆</strong></div>
+
+            <div class="top-bar">
+                <button class="top-link" onclick="showPage('home')">Home</button>
+                <button class="top-link" onclick="showPage('packing')">Packing List</button>
+                <button class="top-link" onclick="showPage('schedule')">Schedule</button>
+            </div>
+
+            <img src="header.jpg" class="header-image">
+        </header>
+
+        <main>
+            <section id = "home">
+                <h2>Welcome to Beach Day!</h2>
+                <p>Everything you need for the perfect beach vacation</p>
+                <iframe data-testid="embed-iframe" 
+                    style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/11X76c5MphTG1VgKmC7hgb?utm_source=generator&si=d90588fd8c18433f"
+                    width="100%" 
+                    height="352" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+            </section>
+
+            <section id="packing">
+                <h2>Packing List</h2>
+                <input type="text" id="itemInput" placeholder="Enter an item">
+                <button id="addItemButton">Add</button>
+                <ul id="packingList"></ul>
+            </section>
+
+            <section id="schedule">
+                <h2>Schedule</h2>
+                <input type="text" id="eventInput" placeholder="Enter an event">
+                <input type="datetime-local" id="dateInput">
+                <button id="addEventButton">Add Event</button>
+                <ul id="scheduleList"></ul>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
